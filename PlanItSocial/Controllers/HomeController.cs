@@ -1,11 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PlanItSocial.Data;
+using PlanItSocial.Helpers;
 using PlanItSocial.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace PlanItSocial.Controllers
@@ -14,16 +18,28 @@ namespace PlanItSocial.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IDAL _idal;
+        private readonly UserManager<ApplicationUser> _usermanager;
 
-        public HomeController(ILogger<HomeController> logger, IDAL idal)
+        public HomeController(ILogger<HomeController> logger, IDAL idal, UserManager<ApplicationUser> usermanager)
         {
             _logger = logger;
             _idal = idal;
+            _usermanager = usermanager;
         }
 
         public IActionResult Index()
         {
-            var myevent = _idal.GetEvent(1);
+            ViewData["Resources"] = JSONListHelper.GetResourceistJSONString(_idal.GetLocations());
+            ViewData["Events"] = JSONListHelper.GetEventListJSONString(_idal.GetEvents());
+            return View();
+        }
+
+        [Authorize] // Action filter attribute, only accessed once logged in
+        public IActionResult MyCalendar()
+        {
+            var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewData["Resources"] = JSONListHelper.GetResourceistJSONString(_idal.GetLocations());
+            ViewData["Events"] = JSONListHelper.GetEventListJSONString(_idal.GetMyEvents(userid));
             return View();
         }
 
