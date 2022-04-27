@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace PlanItSocial.Models
 {
+    // Event class where components of an event lie
     public class Event
     {
+        // Variables
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
@@ -16,13 +18,14 @@ namespace PlanItSocial.Models
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
 
-        //Relational data
+        // Relational data
         public virtual Location Location { get; set; }
         public virtual ApplicationUser User { get; set; }
 
-
-        public Event(IFormCollection form, Location location)
+        // Event method 
+        public Event(IFormCollection form, Location location, ApplicationUser user)
         {
+            User = user;
             Name = form["Event.Name"].ToString();
             Description = form["Event.Description"].ToString();
             StartTime = DateTime.Parse(form["Event.StartTime"].ToString());
@@ -30,8 +33,10 @@ namespace PlanItSocial.Models
             Location = location;
         }
 
-        public void UpdateEvent(IFormCollection form, Location location)
+        // UpdateEvent method
+        public void UpdateEvent(IFormCollection form, Location location, ApplicationUser user)
         {
+            User = user;
             Name = form["Event.Name"].ToString();
             Description = form["Event.Description"].ToString();
             StartTime = DateTime.Parse(form["Event.StartTime"].ToString());

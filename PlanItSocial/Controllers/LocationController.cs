@@ -7,16 +7,21 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PlanItSocial.Data;
 using PlanItSocial.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PlanItSocial.Controllers
 {
+    [Authorize]
     public class LocationController : Controller
     {
         private readonly IDAL _dal;
+        private readonly UserManager<ApplicationUser> _usermanager;
 
-        public LocationController(IDAL idal)
+        public LocationController(IDAL idal, UserManager<ApplicationUser> usermanager)
         {
             _dal = idal;
+            _usermanager = usermanager;
         }
 
         // GET: Location
@@ -66,12 +71,13 @@ namespace PlanItSocial.Controllers
                     _dal.CreateLocation(location);
                     TempData["Alert"] = "Success! You created a location for: " + location.Name;
                     return RedirectToAction(nameof(Index));
-                } 
+                }
                 catch (Exception ex)
                 {
                     ViewData["Alert"] = "An error occurred: " + ex.Message;
                     return View(location);
                 }
+
             }
             return View(location);
         }

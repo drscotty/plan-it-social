@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using PlanItSocial.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using PlanItSocial.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,6 +9,7 @@ using System.Text;
 
 namespace PlanItSocial.Data
 {
+    // ApplicationDbContext class showing events to the ApplicationUser instead of regular users
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlanItSocial.Models
 {
+    // ApplicationUser class inheriting IdentityUser class
     public class ApplicationUser : IdentityUser
     {
         public virtual ICollection<Event> Events { get; set; }

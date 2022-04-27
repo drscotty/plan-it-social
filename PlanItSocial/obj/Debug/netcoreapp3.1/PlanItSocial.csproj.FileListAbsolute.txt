@@ -843,3 +843,4 @@ C:\Users\glenn\Documents\PlanItSocialCalendar\PlanItSocial\bin\Debug\netcoreapp3
 C:\Users\glenn\Documents\PlanItSocialCalendar\PlanItSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\glenn\Documents\PlanItSocialCalendar\PlanItSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\glenn\Documents\PlanItSocialCalendar\PlanItSocial\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+C:\Users\glenn\Documents\PlanItSocialCalendar\PlanItSocial\obj\Debug\netcoreapp3.1\Razor\Views\Home\PageNotFound.cshtml.g.cs

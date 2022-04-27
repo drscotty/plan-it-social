@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace PlanItSocial.Models
 {
+    // Location class 
     public class Location
     {
+        // Variables
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
 
-        //Relational data
+        // Relational data
         public virtual ICollection<Event> Events { get; set; }
     }
 }

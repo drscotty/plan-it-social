@@ -4,9 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace PlanItSocial.Data
 {
+    // IDAL interface adding existing functionality onto the class itself
     public interface IDAL
     {
         public List<Event> GetEvents();
@@ -17,9 +19,10 @@ namespace PlanItSocial.Data
         public void DeleteEvent(int id);
         public List<Location> GetLocations();
         public Location GetLocation(int id);
-        public void CreateLocation(Location Location);
+        public void CreateLocation(Location location);
     }
 
+    // DAL class which is the Data Access Layer
     public class DAL : IDAL
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -42,7 +45,8 @@ namespace PlanItSocial.Data
         public void CreateEvent(IFormCollection form)
         {
             var locname = form["Location"].ToString();
-            var newevent = new Event(form, db.Locations.FirstOrDefault(x => x.Name == locname));
+            var user = db.Users.FirstOrDefault(x => x.Id == form["UserId"].ToString());
+            var newevent = new Event(form, db.Locations.FirstOrDefault(x => x.Name == locname), user);
             db.Events.Add(newevent);
             db.SaveChanges();
         }
@@ -53,7 +57,8 @@ namespace PlanItSocial.Data
             var eventid = int.Parse(form["Event.Id"]);
             var myevent = db.Events.FirstOrDefault(x => x.Id == eventid);
             var location = db.Locations.FirstOrDefault(x => x.Name == locname);
-            myevent.UpdateEvent(form, location);
+            var user = db.Users.FirstOrDefault(x => x.Id == form["UserId"].ToString());
+            myevent.UpdateEvent(form, location, user);
             db.Entry(myevent).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             db.SaveChanges();
         }
@@ -75,9 +80,9 @@ namespace PlanItSocial.Data
             return db.Locations.Find(id);
         }
 
-        public void CreateLocation(Location Location)
+        public void CreateLocation(Location location)
         {
-            db.Locations.Add(Location);
+            db.Locations.Add(location);
             db.SaveChanges();
         }
     }

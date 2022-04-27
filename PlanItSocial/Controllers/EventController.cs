@@ -1,24 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PlanItSocial.Data;
 using PlanItSocial.Models;
 using PlanItSocial.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using PlanItSocial.Controllers.ActionFilters;
 
 namespace PlanItSocial.Controllers
 {
+    [Authorize]
     public class EventController : Controller
     {
         private readonly IDAL _dal;
+        private readonly UserManager<ApplicationUser> _usermanager;
 
-        public EventController(IDAL dal)
+        public EventController(IDAL dal, UserManager<ApplicationUser> usermanager)
         {
             _dal = dal;
+            _usermanager = usermanager;
         }
 
         // GET: Event
@@ -28,7 +35,7 @@ namespace PlanItSocial.Controllers
             {
                 ViewData["Alert"] = TempData["Alert"];
             }
-            return View(_dal.GetEvents());
+            return View(_dal.GetMyEvents(User.FindFirstValue(ClaimTypes.NameIdentifier))) ;
         }
 
         // GET: Event/Details/5
@@ -51,7 +58,7 @@ namespace PlanItSocial.Controllers
         // GET: Event/Create
         public IActionResult Create()
         {
-            return View(new EventViewModel(_dal.GetLocations()));
+            return View(new EventViewModel(_dal.GetLocations(), User.FindFirstValue(ClaimTypes.NameIdentifier)));
         }
 
         // POST: Event/Create
@@ -59,6 +66,7 @@ namespace PlanItSocial.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         public async Task<IActionResult> Create(EventViewModel vm, IFormCollection form)
         {
             try
@@ -74,6 +82,7 @@ namespace PlanItSocial.Controllers
         }
 
         // GET: Event/Edit/5
+        [UserAccessOnly]
         public IActionResult Edit(int? id)
         {
             if (id == null)
@@ -86,7 +95,7 @@ namespace PlanItSocial.Controllers
             {
                 return NotFound();
             }
-            var vm = new EventViewModel(@event, _dal.GetLocations());
+            var vm = new EventViewModel(@event, _dal.GetLocations(), User.FindFirstValue(ClaimTypes.NameIdentifier));
             return View(vm);
         }
 
@@ -106,7 +115,7 @@ namespace PlanItSocial.Controllers
             catch (Exception ex)
             {
                 ViewData["Alert"] = "An error occurred: " + ex.Message;
-                var vm = new EventViewModel(_dal.GetEvent(id), _dal.GetLocations());
+                var vm = new EventViewModel(_dal.GetEvent(id), _dal.GetLocations(), User.FindFirstValue(ClaimTypes.NameIdentifier));
                 return View(vm);
             }
                 
