@@ -1,0 +1,32 @@
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\bin\Debug\netcoreapp3.1\PlanItSocial.Data.deps.json
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\bin\Debug\netcoreapp3.1\PlanItSocial.Data.runtimeconfig.json
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\bin\Debug\netcoreapp3.1\PlanItSocial.Data.runtimeconfig.dev.json
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\bin\Debug\netcoreapp3.1\PlanItSocial.Data.dll
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\bin\Debug\netcoreapp3.1\PlanItSocial.Data.pdb
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\bin\Debug\netcoreapp3.1\PlanItSocial.Domain.dll
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\bin\Debug\netcoreapp3.1\PlanItSocial.Domain.pdb
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.csproj.AssemblyReference.cache
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.AssemblyInfoInputs.cache
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.AssemblyInfo.cs
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.csproj.CoreCompileInputs.cache
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.csproj.CopyComplete
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.dll
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.pdb
+C:\UserData\z003wakj\OneDrive - Siemens Healthineers\Documents\Developer\C#\plan-it-social\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.genruntimeconfig.cache
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\bin\Debug\netcoreapp3.1\PlanItSocial.Data.deps.json
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\bin\Debug\netcoreapp3.1\PlanItSocial.Data.runtimeconfig.json
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\bin\Debug\netcoreapp3.1\PlanItSocial.Data.runtimeconfig.dev.json
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\bin\Debug\netcoreapp3.1\PlanItSocial.Data.dll
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\bin\Debug\netcoreapp3.1\PlanItSocial.Data.pdb
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\bin\Debug\netcoreapp3.1\PlanItSocial.Domain.dll
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\bin\Debug\netcoreapp3.1\PlanItSocial.Domain.pdb
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.csproj.AssemblyReference.cache
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.AssemblyInfoInputs.cache
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.AssemblyInfo.cs
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.csproj.CoreCompileInputs.cache
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.csproj.CopyComplete
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.dll
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.pdb
+C:\Users\glenn\Documents\PlanItSocialCalendar\src\PlanItSocial.Data\obj\Debug\netcoreapp3.1\PlanItSocial.Data.genruntimeconfig.cache

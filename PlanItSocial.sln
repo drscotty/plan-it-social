@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanItSocial", "PlanItSocial\PlanItSocial.csproj", "{0FB7E1F6-090A-4CFD-A4BB-46C00A259753}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9367A808-1A8A-453F-808F-B1B58243047E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C9D40A06-6623-482C-B33C-5D468EF6CFD2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanItSocial.Domain", "src\PlanItSocial.Domain\PlanItSocial.Domain.csproj", "{0476E4C1-69A9-4B26-BB1B-D34EC3099837}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanItSocial.Web", "src\PlanItSocial.Web\PlanItSocial.Web.csproj", "{9CE448AA-1B80-4A49-B852-E138E550D913}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanItSocial.Data", "src\PlanItSocial.Data\PlanItSocial.Data.csproj", "{8DE848FC-9EB3-48FE-9C39-F17040A5C8A0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanItSocial.Domain.Tests", "tests\PlanItSocial.Domain.Tests\PlanItSocial.Domain.Tests.csproj", "{7BBA939E-DFCD-42F2-834C-027195505799}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +21,31 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0FB7E1F6-090A-4CFD-A4BB-46C00A259753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0FB7E1F6-090A-4CFD-A4BB-46C00A259753}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0FB7E1F6-090A-4CFD-A4BB-46C00A259753}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0FB7E1F6-090A-4CFD-A4BB-46C00A259753}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0476E4C1-69A9-4B26-BB1B-D34EC3099837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0476E4C1-69A9-4B26-BB1B-D34EC3099837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0476E4C1-69A9-4B26-BB1B-D34EC3099837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0476E4C1-69A9-4B26-BB1B-D34EC3099837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CE448AA-1B80-4A49-B852-E138E550D913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE448AA-1B80-4A49-B852-E138E550D913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE448AA-1B80-4A49-B852-E138E550D913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE448AA-1B80-4A49-B852-E138E550D913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DE848FC-9EB3-48FE-9C39-F17040A5C8A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE848FC-9EB3-48FE-9C39-F17040A5C8A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE848FC-9EB3-48FE-9C39-F17040A5C8A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE848FC-9EB3-48FE-9C39-F17040A5C8A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BBA939E-DFCD-42F2-834C-027195505799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BBA939E-DFCD-42F2-834C-027195505799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BBA939E-DFCD-42F2-834C-027195505799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BBA939E-DFCD-42F2-834C-027195505799}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0476E4C1-69A9-4B26-BB1B-D34EC3099837} = {9367A808-1A8A-453F-808F-B1B58243047E}
+		{9CE448AA-1B80-4A49-B852-E138E550D913} = {9367A808-1A8A-453F-808F-B1B58243047E}
+		{8DE848FC-9EB3-48FE-9C39-F17040A5C8A0} = {9367A808-1A8A-453F-808F-B1B58243047E}
+		{7BBA939E-DFCD-42F2-834C-027195505799} = {C9D40A06-6623-482C-B33C-5D468EF6CFD2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B2D6AFD1-E545-49B5-B456-C9BACEEBA7E1}

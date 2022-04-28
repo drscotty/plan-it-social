@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <StartupObject>PlanItSocial.Web.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PlanItSocial.Data\PlanItSocial.Data.csproj" />
+    <ProjectReference Include="..\PlanItSocial.Domain\PlanItSocial.Domain.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.15" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.15" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.15" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.17" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.17" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.15" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.15" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.15" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="wwwroot\images\socialcalendar.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Update="wwwroot\images\socialcalendar.jpg">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+</Project>
